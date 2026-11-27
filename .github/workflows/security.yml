@@ -27,7 +27,7 @@ jobs:
       - name: Bandit + pip-audit + npm audit + pytest
         run: scripts/security_scan.sh
       - name: Buscar secretos en todo el historial (gitleaks)
-        uses: gitleaks/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v4
